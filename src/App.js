@@ -1,3 +1,81 @@
+function App(){
+  if(true)
+  {
+    var v=100
+    let l=200
+    const c=300
+    l++;
+    v++;
+    console.log("let:"+l);
+   // c++;
+   // console.log("const:"+c); constant is permanent /no increment/no decrement
+  }
+  return(
+    <>
+    <h1>variable: global:{v}</h1>
+     <h1>does not work let and const :because local</h1>
+     <div id="res"></div>
+    
+    
+    </>
+  )
+}
+
+
+
+
+
+
+/*function App()
+{
+  let myfun=(a,b,c)=>{
+    var tot=a+b+c
+           document.getElementById("res").innerHTML=`<h2>Total:${tot}</h2>`
+  }
+  return(<>
+     <h2>Click here👇</h2>
+     <button onClick={()=>myfun(10,150,160)}>Click me</button>
+     <div id="res"></div>
+  </>)
+}*/
+/*import myimg from './images/images.jpg'
+function App(){
+  return(
+    <>
+    <center>
+    <h2>CHELLAMEEEE !!!!</h2>
+    <img src={myimg} width="400" height="auto" alt="path is wrong"></img>
+    </center>
+    </>
+  )
+}*/
+
+
+
+
+/*function App()
+{
+  var a=600
+  var b=900
+  var c=1000
+  return(
+    <>
+        <h2>Biggest Among 2 no's using conditional or ternaray operator</h2>
+        
+        <h1>Biggest Number:{(a>b && a>c)?a:(b>c)?b:c}</h1>
+        </>
+  )
+}*/
+  export default App
+/*function App(){
+  //javascript learned code 
+  var a=50
+  var b=30
+  return(<>
+        <h1>total:{a+b}</h1>
+  </>)
+}
+export default App*/
 /*function App(){
   return(
     <div>
@@ -13,16 +91,36 @@
 }*/
 // class compnents
 
-    import React from "react"
+   /* import React from "react"
+    class Parent extends React.Component
+    {
+      render(){
+              return(<>   
+              <center>   
+                 <h1>UNGAL ABISHEK</h1>
+                <h2>Exercitation eiusmod reprehenderit et veniam. Excepteur ea anim deserunt minim id Lorem quis enim duis tempor aliquip consequat. Mollit magna eu cillum enim qui eiusmod ea do laborum eu ex. <mark>Anim aliqua excepteur excepteur sint qui </mark>irure tempor deserunt. Exercitation nostrud magna enim officia excepteur nulla amet. Deserunt minim minim aliqua minim dolore ullamco adipisicing ad consequat reprehenderit fugiat id aute. Cillum nulla dolor do ipsum sunt.
+
+Laboris amet anim ad duis aliqua commodo est. Consequat proident ea deserunt commodo amet nostrud. Eiusmod nisi velit cillum nulla amet dolor magna eu incididunt enim mollit Lorem occaecat aliquip. Elit adipisicing tempor ullamco qui et id consectetur et. Ipsum id excepteur ea commodo ea voluptate.
+
+Quis anim commodo nisi voluptate exercitation velit laborum velit irure id. Elit consectetur adipisicing ad velit proident fugiat proident enim amet. Sit id consectetur ipsum sunt enim qui laboris amet culpa. Amet tempor Lorem adipisicing adipisicing id sint elit adipisicing. Cillum velit occaecat nulla nulla magna voluptate ut. Do Lorem aliquip aute aliquip duis deserunt eu excepteur.
+
+Cupidatat deserunt ad voluptate consequat culpa elit voluptate do magna duis. Proident laborum nulla nisi occaecat est. Minim incididunt fugiat exercitation tempor consectetur nostrud proident veniam excepteur. Lorem aute irure ipsum ut minim aliqua ut do sunt elit enim nisi enim Lorem. Qui occaecat voluptate dolor occaecat. Consequat ipsum consectetur consequat commodo sit et eiusmod. Nisi elit nisi laboris veniam exercitation amet Lorem enim fugiat esse.
+
+Magna nisi consequat culpa dolore veniam fugiat duis ex incididunt ea ex. Cupidatat consequat minim est incididunt sit aliquip proident est elit ut duis pariatur. Aliqua adipisicing elit duis sit labore nostrud sint sunt duis officia ullamco.</h2></center>
+             </>
+ )
+      }
+    }
     class App extends React.Component
     {
       render(){
-        return(
-          <div>
+        return(<>        
+          <Parent/>
+          
             <center>
             <h1> RAJINI MURUGAN THUNAI</h1>
             <h2> Welcome Abishek !!</h2>
-            Qui reprehenderit nulla culpa incididunt elit pariatur magna commodo est consequat. Eu excepteur incididunt officia commodo reprehenderit ut. Qui cupidatat qui est adipisicing Lorem anim adipisicing culpa aute fugiat incididunt magna. Ea amet ut do tempor aliquip excepteur eiusmod sint. <mark>Aliquip dolore proident officia consectetur pariatur magna reprehenderit veniam Lorem</mark> reprehenderit eiusmod duis sit. Culpa esse ullamco aliquip non mollit elit reprehenderit excepteur proident.Ex mollit laborum anim incididunt laboris anim velit ad. Consequat tempor minim proident exercitation duis nostrud. Nisi quis enim ut nisi id irure deserunt eu occaecat ea id deserunt. Irure velit dolor in incididunt eu consectetur excepteur nulla. Est ut proident veniam minim qui nostrud. Quis dolor laborum pariatur fugiat ipsum est est laboris ut consequat commodo.
+   Qui reprehenderit nulla culpa incididunt elit pariatur magna commodo est consequat. Eu excepteur incididunt officia commodo reprehenderit ut. Qui cupidatat qui est adipisicing Lorem anim adipisicing culpa aute fugiat incididunt magna. Ea amet ut do tempor aliquip excepteur eiusmod sint. <mark>Aliquip dolore proident officia consectetur pariatur magna reprehenderit veniam Lorem</mark> reprehenderit eiusmod duis sit. Culpa esse ullamco aliquip non mollit elit reprehenderit excepteur proident.Ex mollit laborum anim incididunt laboris anim velit ad. Consequat tempor minim proident exercitation duis nostrud. Nisi quis enim ut nisi id irure deserunt eu occaecat ea id deserunt. Irure velit dolor in incididunt eu consectetur excepteur nulla. Est ut proident veniam minim qui nostrud. Quis dolor laborum pariatur fugiat ipsum est est laboris ut consequat commodo.
 
 Pariatur eiusmod adipisicing irure dolore deserunt nostrud aliquip adipisicing. Ea et duis nostrud anim sunt qui. Enim magna <mark>laboris mollit exercitation irure. Consectetur exercitation fugiat velit do nisi labore </mark> sit enim id laborum fugiat aliquip do.
 
@@ -40,19 +138,15 @@ In tempor veniam aute qui voluptate. Duis dolore do esse officia irure magna rep
             Sunt ea id laboris velit veniam est magna sint do fugiat non reprehenderit. Aliqua ad nisi nulla nisi laboris nisi mollit cupidatat excepteur mollit. Minim culpa dolor non officia voluptate consectetur mollit sit aute occaecat officia consectetur. Voluptate laborum consequat nisi consectetur.Est non tempor sint elit sunt nulla occaecat consequat non ut. Veniam quis proident nisi sit quis laboris nulla reprehenderit ullamco. Et occaecat voluptate ad aute consequat enim quis do veniam occaecat voluptate esse labore ad. Adipisicing nisi ex nostrud cupidatat excepteur cillum Lorem aute consequat duis officia. Est magna laborum est elit proident.
             
             </center>
-          </div>
-        )
+          
+       </>
+ )
       }
     }
 
-export default App
-
-
-
-
+export default App*/
 /*import logo from './logo.svg';
 import './App.css';
-
 function App() {
   return (
     <div className="App">
