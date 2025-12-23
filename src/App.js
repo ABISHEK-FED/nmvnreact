@@ -1,4 +1,378 @@
+
+
+
+import React from "react";
+class App extends React.Component
+{
+  constructor(props)
+  { 
+    super(props)
+    this.state={
+      studentrollno:this.props.data.rno,
+      studentname:this.props.data.sname,
+      studentmark:this.props.data.mark,
+       studentrank:this.props.data.rank,
+        studentgrade:this.props.data.grade,
+         studentloaction:this.props.data.location,
+          studentstatus:this.props.data.issingle,
+
+    }
+  }
+render()
+{
+  return(
+  <>
+          <h1>PEROSONAL INFO WITH DATA</h1>
+          <h2>STUDENT ROLLNO : {this.state.studentrollno}</h2>
+          <h2>STUDENT NAME : {this.state.studentname}</h2>
+          <h2>STUDENT MARK: {this.state.studentmark}</h2>
+           <h2>STUDENT RANK: {this.state.studentmark}</h2>
+  <h2>STUDENT GRADE: {this.state.studentgrade}</h2>
+  <h2>STUDENT LOCATION: {this.state.studentloaction}</h2>
+  <h2>STUDENT STATUS: {this.state.studentstatus?"yes":"No"}</h2>
+  </>)
+}
+}
+export default App
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*import React from "react";
+class App extends React.Component
+{
+  constructor(props)
+  { 
+    super(props)
+    this.state={
+      studentname:this.props.sname,
+      studentcity:this.props.city,
+      stuedentphone:this.props.phone
+
+    }
+  }
+render()
+{
+  return(<>
+          <h1>PEROSONAL INFO WITH PROPS</h1>
+          <h2>STUDENT NAME : {this.state.studentname}</h2>
+          <h2>STUDENT CITY : {this.state.studentcity}</h2>
+          <h2>STUDENT PHONE: {this.state.stuedentphone}</h2>
+  
+  </>)
+}
+}
+export default App
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*import React from "react";
+class App extends React.Component  // App is base , react component is derived
+{
+  constructor()
+  {
+    super()
+    this.state={
+      sno:111,
+      sname:"ABISHEK.S",
+      marks: [89,98 ,75,78,45]
+      
+    }
+  }
+  show=()=>{
+              this.setState({sname:"ABISHEK SACHITHANANDHAM"})
+  }
+           
+  dis=()=>{
+               this.setState({marks: [100, 105, 77, 88, 65]
+  });
+  }
+  dis1=()=>{
+           const newnumber=[...this.state.marks]
+           newnumber[3]=76
+          this.setState({marks:newnumber})
+  }
+  
+  render(){
+    return (<>
+                <h1>STUDENT MARK DETAIL</h1>
+                <h2> STUDENT NAME : {this.state.sname}</h2>
+                <h2> STUDENT NO : {this.state.sno}</h2>
+                  <h2> {this.state.marks.map((v,index)=><>STUDENT MARKS {index+1}={v}<br></br></>)}</h2>
+                  <button onClick={this.show}>Change Name</button>
+                  <button onClick={this.dis}>Update Marks</button>
+                  <button onClick={this.dis1}>Update Single Mark</button>
+               </>)
+  }
+}
+export default App
+
+
+
+
+
+
+
+
+
+
+
+
+/*import Abishek from "./mycomponents/Abishek"
+import { aadhar, accno, phone, sname } from "./mycomponents/commonvar"
+
 function App(){
+  return(
+    <>
+    <Abishek/>
+    <center><h1> MY PERSONAL INFO</h1></center>
+    <h1> MY NAME IS:{sname}</h1>
+    <h1> MY PHONE NUMBER IS:{phone}</h1>
+    <h1> MY AADHAR NO IS : {aadhar}</h1>
+    <h1> MY IOB ACC NO IS :{accno}</h1>
+
+        </>
+  )
+}
+export default App
+
+
+
+
+
+
+
+
+/*function App(){
+  var arr=[11,22,33,44,55,66,77]
+  return(<>
+      <h1>REACT LOOP METHOD</h1>
+     <h2>OLD MODEL</h2>
+     {arr[0]}
+      {arr[ 1]}
+       {arr[2]}
+        {arr[3]}
+         {arr[4]}
+          {arr[5]}
+           {arr[6]}
+    <h2>New Model of loop(loop) </h2>
+    {arr.map((v)=><>{v}<br></br></>)}
+      <h2>New Model of loop </h2>
+      <ol type="I">
+    {arr.map((v)=><li>{v+{}}</li>)}
+     </ol>
+      </>
+  )
+}
+export default App*/
+// function App(){
+//   var arr=[105,122,133,44,55,66,77,102]
+//   var s=0
+//   var ma=arr[0]
+//   var order=arr
+
+//     return (<>
+//              <h2>TASK: SUM OF ARRAY</h2>
+//              <div style={{display:"none"}}>
+//              {arr.map((item)=><>{s=s+item}<br></br></>)}
+//              </div>
+//              <h3>Sum of Array:{s}</h3>
+           
+//               <div style={{display:"none"}}>
+//              { arr.map((v)=><>{ma<v&&<>{ma=v}</> }</>)}
+//              </div>
+//                <h3>Max of Array:{ma}</h3>
+//                 <h2>ASCENDING ORDER</h2>
+//                 <div style={{display:"none"}}>{order.sort((x,y)=>(x-y))}</div>
+//                  {order.map((item)=><>+{item+" "} </>)}
+//                    <h2>DESCENDING ORDER</h2>
+//                 <div style={{display:"none"}}>{order.sort((x,y)=>(y-x))}</div>
+//                  {order.map((item)=><>{item} </>)}
+//                        <h2>ADD IN ELEMENT WITH PUSH</h2>
+//                 <div style={{display:"none"}}>{order.sort((x,y)=>(x-y))}{order.push(650)}</div>
+//                  {order.map((item)=><>{item} </>)}
+//                             <h2>REMOVE LAST ELEMENT WITH POP</h2>
+//                  <div style={{display:"none"}}>{order.sort((x,y)=>(x-y))}{order.pop()}</div>
+//                   {/* <div style={{display:"none"}}>{order.sort((x,y)=>(x-y))}{order.pop()}</div>
+//                         <div style={{display:"none"}}>{order.sort((x,y)=>(x-y))}{order.pop()}</div> */}
+//                  {order.map((item)=><>{item} </>)} 
+                 
+
+
+//                  </>)
+
+//  }
+//  export default App
+
+
+
+
+
+
+
+
+/*function App()
+{
+  var arr=[11,22,33,44,55,66,88,99,100]
+  var[v1,v2,...v3]=arr
+  return(<>
+     <h2>spread operator</h2>
+     <h3>index0:{v1}</h3>
+      <h3>index1:{v2}</h3>
+       <h3>index2:{v3}</h3>
+   
+  </>)
+}
+export default App
+/*function App()
+{
+  var arr=[11,22,33,44,55,66]
+  return(<>
+     <h2>array function</h2>
+     <h3>index0:{arr[0]}</h3>
+      <h3>index1:{arr[1]}</h3>
+       <h3>index2:{arr[2]}</h3>
+        <h3>index3:{arr[3]}</h3>
+         <h3>index4:{arr[4]}</h3>
+          <h3>index5:{arr[5]}</h3>
+  </>)
+}
+export default App
+
+
+
+
+/*function App(){
+  var mark=35
+  return(<>
+      <h1>React simple if statement</h1>
+      <h2>{(mark>34&&"PASS")||"FAIL"}</h2>
+  
+  </>)
+}*/
+//Even or Odd
+// function App(){
+//   let num=19
+//   return(
+//     <>
+//     <h1>React simple if statement </h1>
+//     <h2>{num%2==0 && "even" || "odd"}</h2>
+//     </>
+//   )
+// }
+// export default App
+/*function App(){
+  let avg=75
+  return(
+    <>
+    <h1>React simple if-else statement </h1>
+    <h1>{(avg>=85&&"Outstanding")||(avg>=70&&"v GOOD")||(avg>=55&&"GOOD")||(avg>=35&&"PASS")}</h1>
+    </>
+  )
+}
+export default App*/
+/*function App(){
+     var res="PASS"
+     var avg=35
+     return(<>
+     <h1>{
+      (res==="PASS"&&
+    ( (avg>=85&&"Outstanding")||
+     (avg>=70&&"v GOOD")||
+     (avg>=55&&"GOOD")||
+     (avg>=35&&"PASS")
+      ||"FAIR"))||"No grade because fail"}
+      </h1>
+     </>
+     )
+}
+export default App
+
+
+
+
+
+
+
+/*function App(){
+   var unit=124
+  return(
+    <>
+    <center><h1>Electricity Bill Calculation </h1></center>
+    <h3>{(unit<=100&&"₹0")||
+     (unit>=101&& unit<=125&&"₹50"+(unit-100)*2)||
+     (unit>=126&& unit<=300&&"₹"+(200+(unit-200)*3))||
+      (unit>=301&& unit<=400&&"₹"+(500+(unit-300)*4))||
+      (unit>=401&& unit<=500&&"₹"+(900+(unit-400)*5))
+    }
+  </h3>
+    </>
+  )
+}
+export default App*/
+
+/*+ve or -ve
+function App(){
+  let num=5
+  return(
+    <>
+    <h1>React simple if-else statement </h1>
+    <h1>{num>0?"Positive":num<0?"Negative":"Zero"}</h1>
+    </>
+  )
+}
+export default App*/
+
+/*leap year or not
+ function App(){
+let year=2028
+   return(
+   <>
+    <h1>React simple if statement </h1>
+   <h2>{(year%4==0 && "Leap Year") || "Not a leapyear"}</h2>
+    </>
+ )
+}
+export default App*/
+
+//eligible vote or not
+// function App(){
+//   let age=20
+//   return(
+//     <>
+//     <h1>React simple if statement </h1>
+//     <h2>{age>=18 && "Eligible for Vote" || "Not Eligible"}</h2>
+//     </>
+//   )
+// }
+// export default App
+
+
+
+/*function App(){
   if(true)
   {
     var v=100
@@ -19,7 +393,7 @@ function App(){
     
     </>
   )
-}
+}*/
 
 
 
@@ -66,7 +440,7 @@ function App(){
         </>
   )
 }*/
-  export default App
+ // export default App
 /*function App(){
   //javascript learned code 
   var a=50
