@@ -1,7 +1,199 @@
+import React from 'react'
+import { useEffect,useState } from 'react'
+const App = () => {
+  const[name,setName]=useState("Ungal Abishek 🧜‍♂️")
+  useEffect(()=>{
+   document.title=`hello ! ${name}`
+})
+   const dis=()=>{
+    setName("hey Guru jiii")
+   }
+    const dis1=()=>{
+      setTimeout(() => {
+        
+      }, 6000);
+    setName("welcome to another page !!")
+   }
+  return (
+    <div>
+      <h1>UseEffect Hook</h1>
+      <button onClick={dis}>click Name</button>
+      <button onClick={dis1}>next ?</button>
+      <br></br>
+      {name
+      }
+
+    </div>
+  )
+}
+
+export default App
 
 
 
-import React from "react";
+
+
+
+
+
+
+
+
+
+
+/*import React from "react";
+import { useState } from "react";
+const App=()=>{
+const [val,setVal]=useState(0)
+const dis=(event)=>{
+    setVal(parseInt(event.target.value)+1)
+}
+return(
+  <>
+  <button onClick={dis} value={val}>you clicked:{val}times</button>
+  </>
+  )
+}
+
+export default App
+
+
+
+
+
+
+
+
+
+
+/*import { useState } from "react"
+function App()
+{
+  const[num,setNum]=useState(0)
+  return(
+    <>
+
+    <button onClick={()=>setNum(num+1)}>Clicked{num}</button>
+    </>
+  )
+}
+export default App
+
+// import { useState } from "react";
+// function App()
+// {
+//   const[count,setCount]=useState(100)
+//   const show1=(event)=>{
+//     setCount(count+1)
+//   }
+//   const show2=(event)=>{
+//     setCount(count-1)
+//   }
+
+// return(
+//   <>
+//   <button onClick={show1}>Increment By 1</button>
+//   <button onClick={show2}>Decrement By 1</button>
+//   <br></br>
+//   <h2>{count}</h2>
+//   </>
+// )
+// }
+// export default App
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*import { useState } from 'react'
+import React from 'react'
+
+const App = () => {
+  const [name,setName]=useState("---")
+
+  const dis=(event)=>{
+       setName(event.target.value)
+  }
+  const show=(v)=>{
+    console.log(v)
+  }
+  return (
+    <div>
+      <form>
+      <input type="text" value={name} onChange={dis} placeholder='enter username'></input><br></br> 
+       <input type="password" onChange={()=>show("12345")}placeholder='enter password'></input><br></br>
+          <input type="number" placeholder='enter phone number'></input><br></br>
+            <input type="email" placeholder='enter gmail'></input>
+            <label>Select Gender:</label>
+            <input type='radio'name='gender'></input>male
+            <input type='radio'name='gender'></input>female
+            <input type='radio'name='gender'></input>others
+<br></br>
+       <label>Select Course:</label>
+           <input type='checkbox' name='c1'></input>c
+              <input type='checkbox' name='c2'></input>c++
+                 <input type='checkbox' name='c3'></input>Python
+                    <input type='checkbox' name='c4'></input>java
+                       <input type='checkbox' name='c5'></input>javascript
+                          <input type='checkbox' name='c6'></input>mongoDB
+<br></br>
+<select>
+  <option >select month</option>
+   <option >JANUARY</option>
+    <option >FEBURARY</option>
+     <option selected >MARCH</option>
+      <option >APRIL</option>
+       <option >MAY</option>
+</select>
+<br></br>
+Select Color:<input type='color' name='col'></input>
+<br></br>
+Select DOB:<input type='date' name='dob'></input>
+<br></br>
+Select Time :<input type='time' name='time'></input>
+<br></br>
+Select Week :<input type='week' name='month'></input><br></br>
+Upload resume:<input type="file"></input><br></br>
+<label>Type Your Address:</label>
+<textarea rows="7" cols="25"></textarea><br></br>
+<label>List box</label>
+<select name="days[]"multiple>
+  <option>sunday</option>
+    <option>monday</option>
+      <option>thusday</option>
+        <option>wednesday</option>
+          <option>thrusday</option>
+            <option>friday</option>
+              <option>saturday</option>
+</select><br></br>
+Volume:<input type='range' min="0" max="6"></input><br></br>
+    <label>progress completed in 90% →</label>🧜‍♂️
+        <progress  min="0" max="100" value="90"></progress><br></br>
+                <button>clickme</button>
+        <input type='submit'></input>
+        <input type='button' value='clickme'></input>
+</form>
+    </div>
+  )
+}
+
+export default App
+
+
+
+
+/*import React from "react";
 class App extends React.Component
 {
   constructor(props)
